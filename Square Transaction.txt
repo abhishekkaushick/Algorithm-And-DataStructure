@@ -1,0 +1,47 @@
+#include <stdio.h>
+Square(int array[],int N)
+{
+    
+    int n;
+    int x,j;
+    
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        int sum=0,y=0;
+        scanf("%d",&x);
+        for(j=0;j<N;j++)
+        {
+             sum=sum+array[j];
+             if(sum>=x)
+             {
+              y=1;
+              break;
+             }
+        }
+        if(y==0)
+        {
+            printf("-1\n");
+        }
+        else
+        {
+            printf("%d\n",j+1);
+        }
+    }
+    
+}
+int main()
+{
+    int N;
+    int quries;
+    scanf("%d",&N);
+    int array[1000000];
+    for(int i=0;i<N;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+
+  
+    Square(array,N);
+    return 0;
+}
